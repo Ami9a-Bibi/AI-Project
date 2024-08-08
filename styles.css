@@ -1,0 +1,326 @@
+﻿/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+    /* Dark mode (default) */
+    body.dark-mode {
+        background: linear-gradient(to right, #6a0d91, #ffd700);
+        color: black;
+    }
+
+/* Base Navbar Styles */
+/* Base styles for the navbar */
+.navbar {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode (default) */
+body.dark-mode .navbar {
+    background-color: black; /* White background for night mode */
+    color: #ffd700; /* Black text for night mode */
+}
+
+    body.dark-mode .navbar .nav-link {
+        color: #ffd700; /* Gold text for day mode */
+    }
+
+    body.dark-mode .navbar .btn-primary {
+        background-color: #fff; /* White button background */
+        color: #000; /* Black button text */
+    }
+
+    body.dark-mode .navbar .navbar-brand span {
+        color: #ffd700; /* Gold text for day mode */
+    }
+
+body.dark-mode footer {
+    background-color: black; /* White background for night mode */
+}
+/* Light Mode */
+body.light-mode .navbar {
+    background-color: #001f3f; /* Deep Navy Blue background for day mode */
+    color: #ffd700; /* Gold text for day mode */
+}
+
+    body.light-mode .navbar .nav-link {
+        color: #ffd700; /* Gold text for nav links in day mode */
+    }
+
+    body.light-mode .navbar .btn-primary {
+        background-color: #ffd700; /* Gold button background */
+        color: #001f3f; /* Deep Navy Blue button text */
+    }
+
+    body.light-mode .navbar .navbar-brand span {
+        color: #ffd700; /* Gold text for the website name in day mode */
+    }
+
+header {
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+h2 {
+    margin: 0;
+    animation: fadeInDown 2s ease-in-out;
+    color: #2f4f4f; /* Dark Slate Gray */
+    text-shadow: 0 0 3px #ffd700;
+}
+
+main {
+    flex: 1;
+}
+
+section {
+    animation: fadeInUp 1s ease-in-out;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle dark shadow */
+    margin-bottom: 1rem;
+}
+
+#case-selection {
+    background: linear-gradient(to right, #008080, #ffd700); /* Teal to Gold */
+    color: #2f4f4f; /* Dark Slate Gray */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle dark shadow */
+}
+
+footer {
+    background: #001f3f; /* Deep Navy Blue */
+    color: #ffd700; /* Gold */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.lawyer {
+    background-color: #fff;
+    border: 1px solid #d3d3d3; /* Cool Gray */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+    .lawyer:hover {
+        transform: scale(1.05);
+    }
+
+.carousel-inner .carousel-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Light Mode */
+body.light-mode {
+    background: #fffff0; /* Ivory */
+    color: #2f4f4f; /* Dark Slate Gray for text */
+}
+
+    body.light-mode h2 {
+        color: #2f4f4f; /* Dark Slate Gray */
+        text-shadow: 0 0 3px #ffd700;
+    }
+
+    body.light-mode section {
+        background: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle dark shadow */
+    }
+
+    body.light-mode #case-selection {
+        background: linear-gradient(to right, #008080, #ffd700); /* Teal to Gold */
+        color: #2f4f4f; /* Dark Slate Gray for text */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle dark shadow */
+    }
+
+    body.light-mode footer {
+        background: #001f3f; /* Deep Navy Blue */
+        color: #ffd700; /* Gold */
+    }
+
+.custom-shape {
+    background-color: #008080; /* Teal */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 0 50px 0 50px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.brand-name {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    animation: slideInRight 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Custom carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffd700;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 100%, 100%;
+    background-image: none; /* Remove default background image */
+}
+
+    .carousel-control-prev-icon::after,
+    .carousel-control-next-icon::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        mask-size: cover;
+        mask-repeat: no-repeat;
+        background-color: #008080;
+    }
+
+    .carousel-control-prev-icon::after {
+        mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M4.5 0L3.5 1 6 3.5 0 3.5 0 4.5l6-0.001-2.5 2.5 1 1 4-4-4-4z"/%3E%3C/svg%3E');
+    }
+
+    .carousel-control-next-icon::after {
+        mask-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M3.5 0L4.5 1 2 3.5 8 3.5 8 4.5 2 4.5l2.5 2.5-1 1-4-4 4-4z"/%3E%3C/svg%3E');
+    }
+
+
+
+
+
+
+
+
+
+
+
+/* Base styles for the image and text container */
+.image-text-container {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Distribute space between items */
+    gap: 20px; /* Space between image and text */
+}
+
+/* Container for image */
+.image-container {
+    flex: 1; /* Allows the image container to grow */
+}
+
+/* Container for text */
+.text-container {
+    flex: 2; /* Allows the text container to grow more than the image */
+}
+
+/* Styles for the image */
+.image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 400px; /* Limits maximum size */
+    border-radius: 10px; /* Rounded corners */
+    /* Apply initial state of animation */
+    transform: scale(1);
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition */
+}
+
+/* Apply animation to the image */
+@keyframes uniqueAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+}
+
+/* Styles for text container */
+.text-container h2 {
+    margin-top: 0; /* Remove top margin for the heading */
+}
+
+.text-container p {
+    margin: 0; /* Remove margin for paragraphs */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-text-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .image-container {
+        order: 2; /* Display image after text */
+        margin-top: 20px; /* Add margin above image */
+    }
+
+    .text-container {
+        order: 1; /* Display text before image */
+    }
+}
+
+/* Apply animation to the image on hover */
+.image-container img:hover {
+    animation: uniqueAnimation 1s ease-in-out infinite; /* Apply the animation */
+}
